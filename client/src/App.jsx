@@ -5,7 +5,7 @@ import CoursesList from './pages/students/CoursesList.jsx'
 import CourseDetails from './pages/students/CourseDetails.jsx'
 import MyEnrollMents from './pages/students/MyEnrollments.jsx'
 import Player from './pages/students/Player.jsx'
-import Loading  from './components/students/Loading.jsx';
+import Loading from './components/students/Loading.jsx';
 import Educator from './pages/educator/Educator.jsx'
 import Dashboard from './pages/educator/Dashbord.jsx'
 import AddCourse from './pages/educator/AddCourse.jsx'
@@ -15,8 +15,8 @@ import StudentsEnrolled from './pages/educator/StudentsEnrolled'
 import Navbar from './components/educator/Navbar.jsx';
 import "quill/dist/quill.snow.css";
 import { ToastContainer } from 'react-toastify';
-// import About from './components/About'
-// import ContactForm from './components/ContactForm'
+import About from './components/About'
+import ContactForm from './components/ContactForm'
 
 
 const App = () => {
@@ -29,26 +29,26 @@ const App = () => {
   return (
     <div className='text-default min-h-screen bg-white'>
       <ToastContainer />
-      {!isEducatorRoute &&<Navbar/> }
-      
+      {!isEducatorRoute && <Navbar />}
+
       <Routes>
-        <Route path='/' element={<Home/>} />
-        <Route path='/course-list' element={<CoursesList/>} />
-        <Route path='/course-list/:input' element={<CoursesList/>} />
-        <Route path='/course/:id' element={<CourseDetails/>} />
-        <Route path='/my-enrollments' element={<MyEnrollMents/>} />
-        <Route path='/player/:courseId' element={<Player/>} />
-        <Route path='/loading/:path' element={<Loading/>} />
+        <Route path='/' element={<Home />} />
+        <Route path='/course-list' element={<CoursesList />} />
+        <Route path='/course-list/:input' element={<CoursesList />} />
+        <Route path='/course/:id' element={<CourseDetails />} />
+        <Route path='/my-enrollments' element={<MyEnrollMents />} />
+        <Route path='/player/:courseId' element={<Player />} />
+        <Route path='/loading/:path' element={<Loading />} />
 
-        {/* <Route path='/about' element={<About/>} /> */}
-        {/* <Route path='/contact' element={<ContactForm/>} /> */}
+        <Route path='/about' element={<About />} />
+        <Route path='/contact' element={<ContactForm />} />
 
 
-        <Route path='/educator' element={ <Educator />} >
-            <Route path='/educator' element={<Dashboard />} />
-            <Route path='add-course' element={<AddCourse />} />
-            <Route path='my-courses' element={<MyCourses />} />
-            <Route path='student-enrolled' element={<StudentsEnrolled />} />
+        <Route path='/educator' element={<Educator />} >
+          <Route path='/educator' element={<Dashboard />} />
+          <Route path='add-course' element={<AddCourse />} />
+          <Route path='my-courses' element={<MyCourses />} />
+          <Route path='student-enrolled' element={<StudentsEnrolled />} />
         </Route>
 
       </Routes>
