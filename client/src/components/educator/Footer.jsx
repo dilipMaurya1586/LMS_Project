@@ -4,7 +4,7 @@ import React from 'react'
 import { assets } from '../../assets/assets'
 import { Link } from 'react-router-dom'
 import { FacebookLogo, GitBranch, GithubLogo, LinkedinLogo, TwitterLogo, WhatsappLogo } from 'phosphor-react'
-import SocialIcons from '../SocialIcons'
+// import SocialIcons from '../SocialIcons'
 
 const Footer = () => {
   return (
@@ -19,7 +19,7 @@ const Footer = () => {
       </div>
 
       <div className=''>
-        <SocialIcons/>
+        {/* <SocialIcons/> */}
       </div>
     </footer>
   )
